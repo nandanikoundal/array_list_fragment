@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="232dp"
+        android:layout_height="53dp"
+        android:text="Add Item"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/etadditem"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:hint="enter amount"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:text="Ok"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
+</layout>
