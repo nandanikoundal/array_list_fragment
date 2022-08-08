@@ -12,7 +12,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Toast
 import com.nandani.array_list_fragment.databinding.CustomLayout2Binding
-import com.nandani.array_list_fragment.databindingfragment_a
+import com.nandani.array_list_fragment.databinding.FragmentABinding
 import com.nandani.array_list_fragment.databinding.CustomLayoutBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -30,7 +30,7 @@ class fragment_a : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private lateinit var binding: fragment_a
+    private lateinit var binding: FragmentABinding
     var arrayList: ArrayList<String> = ArrayList()
     lateinit var listActivity: MainActivity
 
@@ -49,16 +49,16 @@ class fragment_a : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = fragment_a().inflate(layoutInflater)
+        binding = FragmentABinding.inflate(layoutInflater)
         var adapter = ArrayAdapter(listActivity, R.layout.simple_list_item_1, arrayList)
         arrayList.add("qwerty")
         arrayList.add("qwerty 1")
         arrayList.add("qwerty 2")
         arrayList.add("qwerty 3")
         arrayList.add("qwerty 4")
-        binding.list.adapter = adapter
+        binding.listview.adapter = adapter
 
-        binding.floatingbtn.setOnClickListener {
+        binding.fabbtn.setOnClickListener {
 
             var dialogBinding = CustomLayout2Binding.inflate(layoutInflater)
             var dialog = Dialog(listActivity)
@@ -79,7 +79,7 @@ class fragment_a : Fragment() {
             dialog.show()
         }
 
-        binding.list.setOnItemClickListener { adapterView, view, i, l ->
+        binding.listview.setOnItemClickListener { adapterView, view, i, l ->
 
             var dialogBinding = CustomLayoutBinding.inflate(layoutInflater)
             var dialog = Dialog(listActivity)
